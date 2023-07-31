@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.14</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>cn.edu.abtu</groupId>
+    <artifactId>srs-parent</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>srs</name>
+    <description>srs</description>
+
+    <!-- 申明子模块 -->
+    <modules>
+        <module>srs-search</module>
+    </modules>
+
+    <!-- 统一声明依赖版本 -->
+    <properties>
+        <srs.version>1.1.0-SNAPSHOT</srs.version>
+        <spring-boot.version>2.7.14</spring-boot.version>
+
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
